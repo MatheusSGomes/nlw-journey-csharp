@@ -1,3 +1,4 @@
+using Journey.Application.UseCases.Trips.GetAll;
 using Journey.Application.UseCases.Trips.Register;
 using Journey.Communication.Requests;
 using Journey.Exception.ExceptionsBase;
@@ -26,5 +27,13 @@ public class TripController : Controller
         {
             return StatusCode(StatusCodes.Status500InternalServerError, "Erro desconhecido");
         }
+    }
+
+    [HttpGet]
+    public IActionResult GetAll()
+    {
+        var useCase = new GetAllTripsUseCase();
+        var result = useCase.Execute();
+        return Ok(result);
     }
 }
