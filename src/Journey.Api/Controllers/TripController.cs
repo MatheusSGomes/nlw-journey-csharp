@@ -22,5 +22,9 @@ public class TripController : Controller
         {
             return BadRequest(ex.Message);
         }
+        catch
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "Erro desconhecido");
+        }
     }
 }
