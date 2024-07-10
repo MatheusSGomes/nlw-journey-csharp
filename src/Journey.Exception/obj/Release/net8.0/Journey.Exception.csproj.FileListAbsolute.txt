@@ -11,3 +11,4 @@
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Exception/obj/Release/net8.0/refint/Journey.Exception.dll
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Exception/obj/Release/net8.0/Journey.Exception.pdb
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Exception/obj/Release/net8.0/ref/Journey.Exception.dll
+/home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Exception/obj/Release/net8.0/Journey.Exception.sourcelink.json

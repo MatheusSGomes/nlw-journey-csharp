@@ -9,3 +9,4 @@
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Communication/obj/Release/net8.0/refint/Journey.Communication.dll
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Communication/obj/Release/net8.0/Journey.Communication.pdb
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Communication/obj/Release/net8.0/ref/Journey.Communication.dll
+/home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Communication/obj/Release/net8.0/Journey.Communication.sourcelink.json

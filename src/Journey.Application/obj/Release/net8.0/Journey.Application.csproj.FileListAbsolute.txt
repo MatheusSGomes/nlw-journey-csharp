@@ -17,3 +17,4 @@
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Application/obj/Release/net8.0/refint/Journey.Application.dll
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Application/obj/Release/net8.0/Journey.Application.pdb
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Application/obj/Release/net8.0/ref/Journey.Application.dll
+/home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Application/obj/Release/net8.0/Journey.Application.sourcelink.json

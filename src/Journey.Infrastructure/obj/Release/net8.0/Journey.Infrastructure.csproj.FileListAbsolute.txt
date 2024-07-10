@@ -9,3 +9,5 @@
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Infrastructure/obj/Release/net8.0/refint/Journey.Infrastructure.dll
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Infrastructure/obj/Release/net8.0/Journey.Infrastructure.pdb
 /home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Infrastructure/obj/Release/net8.0/ref/Journey.Infrastructure.dll
+/home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Infrastructure/obj/Release/net8.0/Journey.Infrastructure.csproj.AssemblyReference.cache
+/home/matheus/ESTUDOS/PROGRAMACAO/DOTNET/NLW/Viagens/Journey/src/Journey.Infrastructure/obj/Release/net8.0/Journey.Infrastructure.sourcelink.json

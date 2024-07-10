@@ -15,8 +15,8 @@ public class TripController : Controller
         try
         {
             var useCase = new RegisterTripUseCase();
-            useCase.Execute(request);
-            return Created();
+            var response = useCase.Execute(request);
+            return Created(String.Empty, response);
         }
         catch (JourneyException ex)
         {
