@@ -14,18 +14,18 @@ namespace Journey.Exception.ExceptionsBase {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ResourceErrorMessages {
+    public class ResourceErrorMessages {
         
         private static System.Resources.ResourceManager resourceMan;
         
         private static System.Globalization.CultureInfo resourceCulture;
         
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ResourceErrorMessages() {
+        public ResourceErrorMessages() {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Resources.ResourceManager ResourceManager {
+        public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
                     System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Journey.Exception.ExceptionsBase.ResourceErrorMessages", typeof(ResourceErrorMessages).Assembly);
@@ -36,7 +36,7 @@ namespace Journey.Exception.ExceptionsBase {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Globalization.CultureInfo Culture {
+        public static System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -44,10 +44,22 @@ namespace Journey.Exception.ExceptionsBase {
                 resourceCulture = value;
             }
         }
-        
-        internal static string Teste {
+
+        public static string DATE_TRIP_MUST_BE_LATER_THAN_TODAY {
             get {
-                return ResourceManager.GetString("Teste", resourceCulture);
+                return ResourceManager.GetString("DATE_TRIP_MUST_BE_LATER_THAN_TODAY", resourceCulture);
+            }
+        }
+        
+        public static string NAME_EMPTY {
+            get {
+                return ResourceManager.GetString("NAME_EMPTY", resourceCulture);
+            }
+        }
+        
+        public static string END_DATE_TRIP_MUST_BE_LATER_START_DATE {
+            get {
+                return ResourceManager.GetString("END_DATE_TRIP_MUST_BE_LATER_START_DATE", resourceCulture);
             }
         }
     }

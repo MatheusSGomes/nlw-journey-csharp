@@ -37,17 +37,17 @@ public class RegisterTripUseCase
     {
         if (string.IsNullOrWhiteSpace(request.Name))
         {
-            throw new JourneyException("O nome não pode ser vazio");
+            throw new JourneyException(ResourceErrorMessages.NAME_EMPTY);
         }
 
         if (request.StartDate.Date < DateTime.UtcNow)
         {
-            throw new JourneyException("A viagem não pode ser registrada para uma data passada.");
+            throw new JourneyException(ResourceErrorMessages.DATE_TRIP_MUST_BE_LATER_THAN_TODAY);
         }
 
         if (request.EndDate.Date < request.StartDate.Date)
         {
-            throw new JourneyException("A viagem deve terminar após a data de início.");
+            throw new JourneyException(ResourceErrorMessages.END_DATE_TRIP_MUST_BE_LATER_START_DATE);
         }
     }
 }

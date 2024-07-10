@@ -36,4 +36,10 @@ public class TripController : Controller
         var result = useCase.Execute();
         return Ok(result);
     }
+
+    // [HttpGet]
+    // public IActionResult GetById(Guid id)
+    // {
+    //     return Ok();
+    // }
 }
