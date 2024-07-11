@@ -8,7 +8,7 @@ namespace Journey.Application.UseCases.Trips.Register;
 
 public class RegisterTripUseCase
 {
-    public ResponseTripJson Execute(RequestRegisterTripJson request)
+    public ResponseShortTripJson Execute(RequestRegisterTripJson request)
     {
         Validate(request);
 
@@ -24,7 +24,7 @@ public class RegisterTripUseCase
         dbContext.Trips.Add(entity);
         dbContext.SaveChanges();
 
-        return new ResponseTripJson
+        return new ResponseShortTripJson
         {
             EndDate = entity.EndDate,
             StartDate = entity.StartDate,
