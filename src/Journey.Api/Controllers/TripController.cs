@@ -18,20 +18,9 @@ public class TripController : Controller
     [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
     public IActionResult Register([FromBody] RequestRegisterTripJson request)
     {
-        try
-        {
-            var useCase = new RegisterTripUseCase();
-            var response = useCase.Execute(request);
-            return Created(String.Empty, response);
-        }
-        catch (JourneyException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-        catch
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Erro desconhecido");
-        }
+        var useCase = new RegisterTripUseCase();
+        var response = useCase.Execute(request);
+        return Created(String.Empty, response);
     }
 
     [HttpGet]
@@ -49,19 +38,8 @@ public class TripController : Controller
     [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
     public IActionResult GetById([FromRoute] Guid id)
     {
-        try
-        {
-            var useCase = new GetTripByIdUseCase();
-            var response = useCase.Execute(id);
-            return Ok(response);
-        }
-        catch (JourneyException ex)
-        {
-            return NotFound(ex.Message);
-        }
-        catch
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Erro desconhecido");
-        }
+        var useCase = new GetTripByIdUseCase();
+        var response = useCase.Execute(id);
+        return Ok(response);
     }
 }
