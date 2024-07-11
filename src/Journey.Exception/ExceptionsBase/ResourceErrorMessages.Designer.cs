@@ -25,7 +25,7 @@ namespace Journey.Exception.ExceptionsBase {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static System.Resources.ResourceManager ResourceManager {
+        internal static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
                     System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Journey.Exception.ExceptionsBase.ResourceErrorMessages", typeof(ResourceErrorMessages).Assembly);
@@ -34,9 +34,9 @@ namespace Journey.Exception.ExceptionsBase {
                 return resourceMan;
             }
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static System.Globalization.CultureInfo Culture {
+        internal static System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -50,16 +50,22 @@ namespace Journey.Exception.ExceptionsBase {
                 return ResourceManager.GetString("DATE_TRIP_MUST_BE_LATER_THAN_TODAY", resourceCulture);
             }
         }
-        
+
         public static string NAME_EMPTY {
             get {
                 return ResourceManager.GetString("NAME_EMPTY", resourceCulture);
             }
         }
-        
+
         public static string END_DATE_TRIP_MUST_BE_LATER_START_DATE {
             get {
                 return ResourceManager.GetString("END_DATE_TRIP_MUST_BE_LATER_START_DATE", resourceCulture);
+            }
+        }
+
+        public static string TRIP_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("TRIP_NOT_FOUND", resourceCulture);
             }
         }
     }

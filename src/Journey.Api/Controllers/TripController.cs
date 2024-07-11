@@ -46,10 +46,22 @@ public class TripController : Controller
     [HttpGet]
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseTripJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
     public IActionResult GetById([FromRoute] Guid id)
     {
-        var useCase = new GetTripByIdUseCase();
-        var response = useCase.Execute(id);
-        return Ok(response);
+        try
+        {
+            var useCase = new GetTripByIdUseCase();
+            var response = useCase.Execute(id);
+            return Ok(response);
+        }
+        catch (JourneyException ex)
+        {
+            return NotFound(ex.Message);
+        }
+        catch
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "Erro desconhecido");
+        }
     }
 }
