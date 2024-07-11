@@ -1,4 +1,5 @@
 using Journey.Application.UseCases.Trips.GetAll;
+using Journey.Application.UseCases.Trips.GetById;
 using Journey.Application.UseCases.Trips.Register;
 using Journey.Communication.Requests;
 using Journey.Exception.ExceptionsBase;
@@ -37,9 +38,12 @@ public class TripController : Controller
         return Ok(result);
     }
 
-    // [HttpGet]
-    // public IActionResult GetById(Guid id)
-    // {
-    //     return Ok();
-    // }
+    [HttpGet]
+    [Route("{id}")]
+    public IActionResult GetById([FromRoute] Guid id)
+    {
+        var useCase = new GetTripByIdUseCase();
+        var response = useCase.Execute(id);
+        return Ok(response);
+    }
 }
