@@ -15,4 +15,9 @@ public class ErrorOnValidationException : JourneyException
     {
         return HttpStatusCode.BadRequest;
     }
+
+    public override IList<string> GetErrorMessages()
+    {
+        return _errors;
+    }
 }
