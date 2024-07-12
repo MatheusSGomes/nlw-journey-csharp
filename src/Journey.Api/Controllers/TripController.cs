@@ -14,8 +14,7 @@ public class TripController : Controller
 {
     [HttpPost]
     [ProducesResponseType(typeof(ResponseShortTripJson), StatusCodes.Status201Created)]
-    [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status400BadRequest)]
     public IActionResult Register([FromBody] RequestRegisterTripJson request)
     {
         var useCase = new RegisterTripUseCase();
@@ -35,7 +34,7 @@ public class TripController : Controller
     [HttpGet]
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseTripJson), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
     public IActionResult GetById([FromRoute] Guid id)
     {
         var useCase = new GetTripByIdUseCase();
@@ -46,7 +45,6 @@ public class TripController : Controller
     [HttpDelete]
     [Route("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
     public IActionResult Delete([FromRoute] Guid id)
     {
         var useCase = new DeleteTripByIdUseCase();
