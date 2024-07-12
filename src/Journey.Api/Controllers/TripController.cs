@@ -1,9 +1,9 @@
+using Journey.Application.UseCases.Trips.Delete;
 using Journey.Application.UseCases.Trips.GetAll;
 using Journey.Application.UseCases.Trips.GetById;
 using Journey.Application.UseCases.Trips.Register;
 using Journey.Communication.Requests;
 using Journey.Communication.Responses;
-using Journey.Exception.ExceptionsBase;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Journey.Api.Controllers;
@@ -41,5 +41,16 @@ public class TripController : Controller
         var useCase = new GetTripByIdUseCase();
         var response = useCase.Execute(id);
         return Ok(response);
+    }
+
+    [HttpDelete]
+    [Route("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
+    public IActionResult Delete([FromRoute] Guid id)
+    {
+        var useCase = new DeleteTripByIdUseCase();
+        useCase.Execute(id);
+        return NoContent();
     }
 }
