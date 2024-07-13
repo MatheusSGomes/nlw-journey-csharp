@@ -1,3 +1,4 @@
+using Journey.Application.UseCases.Activities.Register;
 using Journey.Application.UseCases.Trips.Delete;
 using Journey.Application.UseCases.Trips.GetAll;
 using Journey.Application.UseCases.Trips.GetById;
@@ -50,5 +51,19 @@ public class TripController : Controller
         var useCase = new DeleteTripByIdUseCase();
         useCase.Execute(id);
         return NoContent();
+    }
+
+    [HttpPost]
+    [Route("{tripId}/Activity")]
+    [ProducesResponseType(typeof(ResponseActivityJson), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
+    public IActionResult RegisterActivity(
+        [FromRoute] Guid tripId,
+        [FromBody] RequestRegisterActivityJson request)
+    {
+        var useCase = new RegisterActivityForTripUseCase();
+        var response = useCase.Execute(tripId, request);
+        return Created(string.Empty, response);
     }
 }
